@@ -15,7 +15,7 @@ with open('collected-data/ny_hospitals.csv', 'r', encoding='utf-8') as f:
 
 # Read the large national CSV file
 national_data = {}
-with open('data/hvbp_clinical_outcomes.csv', 'r', encoding='utf-8') as f:
+with open('data/FY_2025_HAC_Reduction_Program_Hospital.csv', 'r', encoding='utf-8') as f:
     reader = csv.DictReader(f)
     fieldnames = reader.fieldnames
     for row in reader:
@@ -197,7 +197,7 @@ with open('collected-data/nys_LQTP_HVBP.csv', 'w', newline='', encoding='utf-8')
     writer.writerows(output_rows)
 
 print(f"\n{'='*60}")
-print(f"Successfully created nys_LQTP_HVBP.csv")
+print(f"Successfully created nys_LQTP_HACARP.csv")
 print(f"Total rows: {len(output_rows)}")
 print(f"Hospitals matched (in 219 list, found in national data): {len(matched_facilities)}")
 print(f"Hospitals in 219 list but not found in national data: {len(not_found_rows)}")

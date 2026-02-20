@@ -1,0 +1,48 @@
+pfi,hospital_name,county,region,unit_name,unit_description,rn_count,rn_hours_per_pt,avg_patients,rn_pts_per_nurse
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Cardiac Catheterization/EP,Cardiac Catheterization Lab (M7),15,11.29,10.63,0.71
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Cardiac Catheterization/EP,Electrophysiology Lab (A7),7,11.2,5,0.71
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Dialysis - Acute,Adult Dialysis (A2),5,3.46,11.55,2.31
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Dialysis - Acute,Pediatric Dialysis (A2),2,3.44,4.65,2.32
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Emergency Department,Adult Emergency Department,18,2.84,51.06,2.82
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Emergency Department,Pediatric Emergency Department,5,2.08,19.2,3.84
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Endoscopy,Digestive Disease Center (A4),17,4.17,32.64,1.92
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Infusion Services,Apheresis (A2),9,2.16,33.44,3.7
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Intensive Care,Cardiopulmonary Surgery & Vascular ICU (D2N),7,4.37,12.82,1.83
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Intensive Care,Medical ICU (D3E),10,4.64,17.23,1.72
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Intensive Care,Pediatric ICU (E7),7,4.67,12,1.71
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Intensive Care,Surgical ICU (B2),16,4.52,28.29,1.77
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Colorectal Surgery & Urology (C2),5,1.86,21.51,4.3
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Coronary Care Unit (D2E),8,4.54,14.11,1.76
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Elective Orthopedics (B3W),5,1.69,23.69,4.74
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,General Medicine (C3E),2,1.32,12.14,6.07
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,General Surgery/Trauma (B3),8,1.8,35.52,4.44
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Hematology/Oncology (D4E),4,1.85,17.26,4.32
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Infectious Disease (C4),6,2.02,23.79,3.97
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Medical Cardiology (D4N),5,1.48,17.11,5.42
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Medicine-Renal (E5),6,1.72,27.87,4.65
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Medicine/Surgery (E3),6,1.94,24.76,4.13
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Medicine/Surgery (E4),8,1.82,35.21,4.4
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Medicine/Surgery (M3),4,2.03,15.75,3.94
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Medicine/Surgery (M4),5,1.99,20.11,4.02
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Neuroprogressive (D5E),8,3.03,21.09,2.64
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Neuroscience & Epilepsy Monitoring (D5N),5,1.98,20.2,4.04
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Orthopedics/Spine (M2),4,2.05,15.6,3.9
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Post-Cardiothoracic Surgery (C8),7,2.17,25.75,3.69
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Progressive Critical Care (D3N),7,3.91,16.51,2.36
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Secure Unit (C3W),2,2.09,7.65,3.83
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Surgical Short Stay (C6),4,1.84,17.43,4.36
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Vascular Surgery (C5),5,1.73,23.15,4.63
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Medical/Surgical,Vascular Surgery (M5),5,1.99,20.14,4.03
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Neonatal,Neonatal ICU (B4),23,4.15,44.32,1.93
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Obstetrics/Gynecology,Birthplace/GYN (E6),6,2,23.95,3.99
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Obstetrics/Gynecology,Labor & Delivery (D6E),12,46.6,2.06,0.17
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Obstetrics/Gynecology,Maternal Special Care/Antepartum (D6N),3,2.96,8.1,2.7
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Other,Operating Room,34.71,6.17,44.98,1.3
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Other,Post-Anesthesia Care Unit (PACU),14.57,5.52,21.17,1.45
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Other,Pre-Admission Services,10,0.92,86.74,8.26
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Other,Pre-Operative Care Unit (POCU),12,1.94,61.96,4.13
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Other,Vascular Interventional Radiology (VIR),13.31,6.29,16.92,1.27
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Pediatric,Pediatrics (C7),5,2.61,15.35,3.07
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Pediatric,Pediatrics (D7),6,2.38,20.13,3.36
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Psychiatry,Psychiatry (E2),3,1.48,16.26,5.42
+0001,Albany Medical Center Hospital,Albany,Capital District Regional Office,Rehabilitaion,Rehabilitation (E8),2,1.66,9.65,4.83

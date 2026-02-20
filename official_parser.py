@@ -25,12 +25,12 @@ PAGE_URL = f"{BASE_URL}/facilities/hospital/staffing_plans/"
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
 
-KEEP_UNITS = {"intensive care", "critical care", "medical/surgical", "emergency department"}
+KEEP_UNITS = {"critical care", "intensive care", "medical/surgical", "emergency department"}
 
 SHIFT_KEYWORDS = {
-    "day":     "LPN DAY SHIFT",
-    "evening": "LPN EVENING SHIFT",
-    "night":   "LPN NIGHT SHIFT",
+    "day":     "DAY SHIFT UNLICENSED",
+    "evening": "EVENING SHIFT UNLICENSED",
+    "night":   "NIGHT SHIFT UNLICENSED",
 }
 
 
@@ -110,56 +110,25 @@ def parse_rn_shifts(pdf_bytes):
                 if unit_name.lower() not in KEEP_UNITS:
                     continue
 
-                if unit_name not in units:
-                    units[unit_name] = {
+                unit_desc = str(row[1]).strip() if row[1] else ""
+                key = (unit_name, unit_desc)
+
+                if key not in units:
+                    units[key] = {
                         "unit_name":        unit_name,
-                        "unit_description": str(row[1]).strip() if row[1] else "",
+                        "unit_description": unit_desc,
                     }
 
-                u = units[unit_name]
-                u[f"{prefix}lpn_count"]        = str(row[2]).strip() if len(row) > 2 and row[2] else ""
-                u[f"{prefix}lpn_hours_per_pt"] = str(row[3]).strip() if len(row) > 3 and row[3] else ""
-                u[f"{prefix}avg_patients"]     = str(row[4]).strip() if len(row) > 4 and row[4] else ""
-                u[f"{prefix}lpn_pts_per_nurse"] = str(row[5]).strip() if len(row) > 5 and row[5] else ""
+                u = units[key]
+                u[f"{prefix}UNLICENSED_count"]        = str(row[2]).strip() if len(row) > 2 and row[2] else ""
+                u[f"{prefix}UNLICENSED_hours_per_pt"] = str(row[3]).strip() if len(row) > 3 and row[3] else ""
+                # u[f"{prefix}avg_patients"]     = str(row[4]).strip() if len(row) > 4 and row[4] else ""
+                # u[f"{prefix}LPN_pts_per_nurse"] = str(row[5]).strip() if len(row) > 5 and row[5] else ""
 
     return hospital_info, units
 
 
 def main():
-    #  # ── Test on a single PDF ──────────────────────────────────────────────────
-    # test_url = "https://www.health.ny.gov/facilities/hospital/staffing_plans/docs/0001.pdf"
-    # print(f"Testing on: {test_url}")
-
-    # resp = requests.get(test_url, timeout=60, headers=HEADERS)
-    # resp.raise_for_status()
-    # hospital_info, units = parse_rn_shifts(resp.content)
-
-    # rows = []
-    # for unit in units.values():
-    #     rows.append({
-    #         "pfi":           hospital_info.get("reporting_organization_id", ""),
-    #         "hospital_name": hospital_info.get("reporting_organization", ""),
-    #         "county":        hospital_info.get("county", ""),
-    #         "region":        hospital_info.get("region", ""),
-    #         **unit,
-    #     })
-
-    # print("\nAll unit names found in this PDF:")
-    # with pdfplumber.open(io.BytesIO(resp.content)) as pdf:
-    #     for page in pdf.pages:
-    #         text = page.extract_text() or ""
-    #         first_line = text.split("\n")[0].strip().upper()
-    #         if "RN DAY SHIFT" in first_line:
-    #             tables = page.extract_tables()
-    #             if tables:
-    #                 for row in tables[0][2:]:
-    #                     if row and row[0] and str(row[0]).strip():
-    #                         print(f"  '{row[0].strip()}'")
-
-    # df = pd.DataFrame(rows)
-    # print(df.to_string())
-    # df.to_csv("rn_shifts_test.csv", index=False)
-    # print(f"\nSaved {len(rows)} rows to rn_shifts_test.csv")
     facilities = get_facilities()
     all_rows = []
     errors = []
@@ -187,12 +156,12 @@ def main():
         time.sleep(0.75)
 
     df = pd.DataFrame(all_rows)
-    df.to_csv("lpn_shifts_all.csv", index=False)
-    print(f"\nDone! {len(all_rows)} rows saved to lpn_shifts_all.csv")
+    df.to_csv("UNLICENSED_shifts_all.csv", index=False)
+    print(f"\nDone! {len(all_rows)} rows saved to UNLICENSED_shifts_all.csv")
 
     if errors:
-        pd.DataFrame(errors).to_csv("lpn_shifts_errors.csv", index=False)
-        print(f"{len(errors)} errors saved to lpn_shifts_errors.csv")
+        pd.DataFrame(errors).to_csv("UNLICENSED_shifts_errors.csv", index=False)
+        print(f"{len(errors)} errors saved to UNLICENSED_shifts_errors.csv")
 
 
 if __name__ == "__main__":

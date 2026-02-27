@@ -28,9 +28,9 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleW
 KEEP_UNITS = {"intensive care", "critical care", "medical/surgical", "emergency department"}
 
 SHIFT_KEYWORDS = {
-    "day":     "LPN DAY SHIFT",
-    "evening": "LPN EVENING SHIFT",
-    "night":   "LPN NIGHT SHIFT",
+    "day":     "DAY UNLICENSED SHIFT",
+    "evening": "EVENING UNLICENSED SHIFT",
+    "night":   "NIGHT UNLICENSED SHIFT",
 }
 
 
@@ -117,10 +117,10 @@ def parse_rn_shifts(pdf_bytes):
                     }
 
                 u = units[unit_name]
-                u[f"{prefix}lpn_count"]        = str(row[2]).strip() if len(row) > 2 and row[2] else ""
-                u[f"{prefix}lpn_hours_per_pt"] = str(row[3]).strip() if len(row) > 3 and row[3] else ""
+                u[f"{prefix}unlicensed_count"]        = str(row[2]).strip() if len(row) > 2 and row[2] else ""
+                u[f"{prefix}unlicensed_hours_per_pt"] = str(row[3]).strip() if len(row) > 3 and row[3] else ""
                 u[f"{prefix}avg_patients"]     = str(row[4]).strip() if len(row) > 4 and row[4] else ""
-                u[f"{prefix}lpn_pts_per_nurse"] = str(row[5]).strip() if len(row) > 5 and row[5] else ""
+                u[f"{prefix}unlicensed_pts_per_nurse"] = str(row[5]).strip() if len(row) > 5 and row[5] else ""
 
     return hospital_info, units
 
@@ -187,12 +187,12 @@ def main():
         time.sleep(0.75)
 
     df = pd.DataFrame(all_rows)
-    df.to_csv("lpn_shifts_all.csv", index=False)
-    print(f"\nDone! {len(all_rows)} rows saved to lpn_shifts_all.csv")
+    df.to_csv("unlicensed_shifts_all.csv", index=False)
+    print(f"\nDone! {len(all_rows)} rows saved to unlicensed_shifts_all.csv")
 
     if errors:
-        pd.DataFrame(errors).to_csv("lpn_shifts_errors.csv", index=False)
-        print(f"{len(errors)} errors saved to lpn_shifts_errors.csv")
+        pd.DataFrame(errors).to_csv("unlicensed_shifts_errors.csv", index=False)
+        print(f"{len(errors)} errors saved to unlicensed_shifts_errors.csv")
 
 
 if __name__ == "__main__":
